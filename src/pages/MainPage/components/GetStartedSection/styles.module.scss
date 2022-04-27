@@ -1,0 +1,53 @@
+@import "styles/variables.scss";
+
+.container {
+  margin-top: 110px;
+  padding-bottom: 123px;
+  background: $lightWhite;
+  font-family: "Poppins";
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    margin-top: 123px;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 122%;
+    color: #000f33;
+  }
+
+  .startBtn {
+    margin-top: 45px;
+    height: 53px;
+    background: $blue;
+    letter-spacing: 0.6px;
+    width: 136px;
+    box-sizing: border-box;
+    border: 0;
+    outline: none;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 15px 25px;
+    color: $white;
+    cursor: pointer;
+    align-self: center;
+  }
+
+  @media (max-width: 360px) {
+    margin-top: 52px;
+    padding-bottom: 40px;
+    .title {
+      margin-top: 60px;
+      width: 300px;
+      text-align: center;
+    }
+
+    .startBtn {
+      width: 85%;
+      margin-top: 79px;
+    }
+  }
+}

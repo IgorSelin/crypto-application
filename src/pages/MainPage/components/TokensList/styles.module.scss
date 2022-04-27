@@ -1,0 +1,223 @@
+@import "styles/variables.scss";
+
+.container {
+  margin-top: 228px;
+  font-family: "Poppins";
+
+  .title {
+    font-size: 35px;
+    font-weight: 600;
+    padding-left: 10px;
+  }
+
+  .tableWrapper {
+    overflow: auto;
+    position: relative;
+
+    .loaderContainer {
+      width: 100%;
+      margin: 40px auto 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 200px;
+    }
+
+    .table {
+      margin-top: 61px;
+      display: flex;
+      flex-direction: column;
+      width: 1080px;
+      height: 618px;
+      box-sizing: border-box;
+
+      .tableHeader {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $secondary;
+        padding: 30px;
+
+        .Name {
+          width: 37%;
+        }
+
+        .LastPrice {
+          width: 20%;
+        }
+
+        .Change {
+          width: 18%;
+        }
+
+        .Marketcap {
+          width: 31%;
+        }
+      }
+
+      .tableBody {
+        display: flex;
+        flex-direction: column;
+        margin-top: -15px;
+
+        .row:nth-child(odd) {
+          background: $lightWhite;
+        }
+
+        .row {
+          padding: 30px;
+          height: 89px;
+          box-sizing: border-box;
+          display: flex;
+          justify-content: space-between;
+
+          & > div {
+            display: flex;
+            align-items: center;
+          }
+
+          .userName {
+            width: 37%;
+            font-weight: 600;
+            gap: 22px;
+
+            .mainName {
+              width: 100px;
+              max-width: 100px;
+            }
+
+            img {
+              height: 44px;
+              width: 44px;
+            }
+
+            .shortName {
+              font-weight: 400;
+              color: $secondary;
+            }
+          }
+
+          .lastPrice {
+            width: 20%;
+          }
+
+          .increase {
+            color: #00ac4f;
+          }
+
+          .decrease {
+            color: #d45b5b;
+          }
+
+          .changes {
+            width: 18%;
+          }
+
+          .marketCup {
+            width: 31%;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1110px) {
+    .title {
+      padding-left: 20px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    margin-top: 66px;
+
+    .title {
+      text-align: center;
+      font-size: 25px;
+      margin-right: 20px;
+    }
+
+    .tableWrapper {
+      overflow-x: hidden;
+
+      .loaderContainer {
+        bottom: 100px;
+      }
+
+      .table {
+        width: 310px;
+        margin-top: 74px;
+        height: 300px;
+
+        .tableHeader {
+          padding: 0 14px 0px 30px;
+          font-size: 14px;
+
+          .Name {
+            width: 51%;
+          }
+
+          .LastPrice {
+            width: 33%;
+          }
+
+          .Marketcap {
+            display: none;
+          }
+          .Change {
+            width: 10%;
+          }
+        }
+
+        .tableBody {
+          display: flex;
+          margin-top: 23px;
+          padding-left: 16px;
+
+          .row:nth-child(odd) {
+            background: unset;
+          }
+
+          .row {
+            padding: 0px 14px;
+            height: 60px;
+
+            .userName {
+              gap: 12px;
+              width: 51%;
+
+              img {
+                width: 26px;
+                height: 26px;
+              }
+
+              .shortName {
+                display: none;
+              }
+            }
+
+            .lastPrice {
+              width: 33%;
+            }
+
+            .marketCup {
+              display: none;
+            }
+
+            .changes {
+              width: 10%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 350px) {
+    .tableWrapper {
+      overflow-x: scroll;
+    }
+  }
+}
