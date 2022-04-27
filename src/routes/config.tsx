@@ -8,7 +8,7 @@ export interface IRoute {
 
 export const routes: IRoute[] = [
   {
-    path: Paths.HOME,
+    path: Paths.MAIN_PAGE,
     exact: true,
     component: Pages.MainPage,
   },

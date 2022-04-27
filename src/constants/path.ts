@@ -1,5 +1,5 @@
 enum Paths {
-  HOME = "/",
+  MAIN_PAGE = "/",
 }
 
 export default Paths;
