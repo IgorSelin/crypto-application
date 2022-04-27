@@ -28,7 +28,7 @@
       margin-top: 61px;
       display: flex;
       flex-direction: column;
-      width: 1080px;
+      max-width: 1080px;
       height: 618px;
       box-sizing: border-box;
 
@@ -102,6 +102,11 @@
 
           .lastPrice {
             width: 20%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            display: block;
+            padding-top: 3px;
           }
 
           .increase {
@@ -130,6 +135,43 @@
     }
   }
 
+  @media (max-width: 800px) {
+    .tableWrapper .table .tableBody .row {
+      .userName {
+        .mainName {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+        .shortName {
+          display: none;
+        }
+
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .tableWrapper .table {
+      .tableHeader {
+        .Marketcap {
+          display: none;
+        }
+      }
+
+      .tableBody {
+        .row {
+          .marketCup {
+            display: none;
+          }
+        }
+      }
+    }
+  }
   @media (max-width: 360px) {
     margin-top: 66px;
 
@@ -140,8 +182,6 @@
     }
 
     .tableWrapper {
-      overflow-x: hidden;
-
       .loaderContainer {
         bottom: 100px;
       }
@@ -163,16 +203,12 @@
             width: 33%;
           }
 
-          .Marketcap {
-            display: none;
-          }
           .Change {
             width: 10%;
           }
         }
 
         .tableBody {
-          display: flex;
           margin-top: 23px;
           padding-left: 16px;
 
@@ -192,20 +228,12 @@
                 width: 26px;
                 height: 26px;
               }
-
-              .shortName {
-                display: none;
-              }
             }
 
             .lastPrice {
               width: 33%;
+              padding-top: 18px;
             }
-
-            .marketCup {
-              display: none;
-            }
-
             .changes {
               width: 10%;
             }
@@ -215,9 +243,17 @@
     }
   }
 
-  @media (max-width: 350px) {
-    .tableWrapper {
-      overflow-x: scroll;
+  @media (max-width: 330px) {
+    font-size: 12px;
+    .tableWrapper .table {
+      .tableHeader {
+        padding: 0 30px;
+      }
+      .tableBody {
+        .row {
+          padding-right: 30px;
+        }
+      }
     }
   }
 }
